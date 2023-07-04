@@ -30,7 +30,11 @@
     width: 290px !important;
   }
   #section-apresentation .conteiner-content .apresentation-my {
+<<<<<<< HEAD
     width: 400px !important;
+=======
+    width: 450px !important;
+>>>>>>> fb1cfbdfe3646a88b99a80c587bbb344c210b769
   }
   #section-apresentation .conteiner-content .apresentation-my h1 {
     font-size: 50px !important;
