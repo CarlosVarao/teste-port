@@ -16,22 +16,23 @@
 }
 
 @media (max-width: 1200px) {
-  #section-apresentation {
-    display: flex !important;
-  }
   #section-apresentation .conteiner-content {
     height: 97vh !important;
+  }
+  #section-apresentation .conteiner-content .ft-perf {
+    width: 295px !important;
   }
   #section-apresentation .conteiner-content .ft-perf::before {
     height: 425px !important;
     width: 290px !important;
   }
   #section-apresentation .conteiner-content .ft-perf img {
-    width: 300px !important;
+    width: 290px !important;
+  }
+  #section-apresentation .conteiner-content .apresentation-my {
+    width: 400px !important;
   }
   #section-apresentation .conteiner-content .apresentation-my h1 {
-    height: 154px;
-    width: 400px !important;
     font-size: 50px !important;
   }
   #section-apresentation .conteiner-content .apresentation-my p:nth-child(3) {
@@ -41,55 +42,48 @@
   #section-apresentation .conteiner-content .apresentation-my a img {
     width: 95px !important;
   }
+  #section-about .about-content .about-title h2 {
+    font-size: 40px !important;
+  }
+  #section-about .about-content .about-me {
+    width: 700px !important;
+  }
+  #section-about .about-content .about-me p {
+    font-size: 19px !important;
+    text-align: justify;
+    line-height: 30px;
+  }
+  #section-skills .skills-box .skills-title {
+    width: 350px;
+  }
+  #section-skills .skills-box .skills-title h2 {
+    font-size: 45px;
+    color: #d71f5b;
+    text-shadow: 0px 0px 2px rgba(255, 79, 138, 0.3647058824);
+  }
+  #section-skills .skills-box .skills-title p {
+    padding: 18px;
+    font-size: 15px;
+    text-align: justify;
+  }
+  #section-skills .skills-box .skills-me-slider {
+    width: 600px !important;
+  }
+  #section-skills .skills-box .skills-me-slider .skills-conteiner:hover {
+    transform: scale(1.1);
+    border: 2px solid #d71f5b;
+    box-shadow: 0px 0px 7px rgba(255, 79, 138, 0.431372549);
+  }
+  #section-skills .skills-box .skills-me-slider .skills-conteiner img {
+    width: 50px;
+    background-color: transparent;
+  }
 }
 @media (max-width: 800px) {
   .menu {
     flex-direction: column;
     justify-content: center !important;
     gap: 2px !important;
-  }
-  #section-apresentation .conteiner-content {
-    gap: 26px !important;
-  }
-  #section-apresentation .conteiner-content .ft-perf::before {
-    height: 358px !important;
-    width: 245px !important;
-  }
-  #section-apresentation .conteiner-content .ft-perf img {
-    width: 250px !important;
-  }
-  #section-apresentation .conteiner-content .apresentation-my {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: space-between;
-    gap: 8px;
-  }
-  #section-apresentation .conteiner-content .apresentation-my p:first-child {
-    font-size: 23px !important;
-  }
-  #section-apresentation .conteiner-content .apresentation-my h1 {
-    height: 100px !important;
-    width: 300px !important;
-    font-size: 37px !important;
-  }
-  #section-apresentation .conteiner-content .apresentation-my p:nth-child(3) {
-    height: 60px !important;
-    width: 235px !important;
-    font-size: 18px !important;
-  }
-  #section-apresentation .conteiner-content .apresentation-my a img {
-    margin-top: 50px !important;
-    width: 95px !important;
-  }
-  #section-about .about-content {
-    flex-direction: column;
-  }
-  #section-about .about-content .about-title {
-    font-size: 25px !important;
-  }
-  #section-about .about-content .about-me {
-    width: 85% !important;
   }
 }
 @media (max-width: 610px) {
@@ -590,10 +584,10 @@ main .estruturaDaMain #section-about .about-content {
 }
 main .estruturaDaMain #section-about .about-content .about-title {
   width: 325px;
-  font-size: 30px;
   text-align: center;
 }
 main .estruturaDaMain #section-about .about-content .about-title h2 {
+  font-size: 45px;
   color: #d71f5b;
   text-shadow: 0px 0px 2px rgba(255, 79, 138, 0.3647058824);
 }
@@ -605,10 +599,6 @@ main .estruturaDaMain #section-about .about-content .about-title h2 i {
 main .estruturaDaMain #section-about .about-content .about-me {
   width: 800px;
   position: relative;
-}
-main .estruturaDaMain #section-about .about-content .about-me h2,
-main .estruturaDaMain #section-about .about-content .about-me i {
-  font-size: 30px;
 }
 main .estruturaDaMain #section-about .about-content .about-me p {
   font-size: 23px;
@@ -623,6 +613,7 @@ main .estruturaDaMain #section-about .about-content .about-me a img {
   bottom: -115px;
   left: 45%;
   width: 110px;
+  background-color: transparent;
 }
 main .estruturaDaMain #section-skills {
   height: 100vh;
