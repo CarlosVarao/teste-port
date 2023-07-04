@@ -2,24 +2,26 @@
 
   // primeira sessão
   #section-apresentation {
-    display: flex !important;
 
     & .conteiner-content {
       height: 97vh !important;
 
       & .ft-perf {
+        width: 295px !important;
 
         &::before {
           height: 425px !important;
           width: 290px !important;
+
         }
 
         & img {
-          width: 300px !important;
+          width: 290px !important;
         }
       }
 
       & .apresentation-my {
+        width: 450px !important;
 
         & h1 {
           height: 154px;
@@ -38,6 +40,72 @@
       }
     }
   }
+
+  // config 2 sessão da main
+  #section-about {
+
+    .about-content {
+
+      & .about-title {
+
+        & h2 {
+          font-size: 40px !important;
+        }
+      }
+
+      & .about-me {
+        width: 700px !important;
+
+        & p {
+          font-size: 19px !important;
+          text-align: justify;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+
+  #section-skills {
+
+    & .skills-box {
+
+      & .skills-title {
+        width: 350px;
+
+        & h2 {
+          font-size: 45px;
+          color: $color-font-secundaria;
+          text-shadow: 0px 0px 2px #ff4f8a5d;
+        }
+
+        & p {
+          padding: 18px;
+          font-size: 15px;
+          text-align: justify;
+        }
+      }
+
+      & .skills-me-slider {
+        width: 600px !important;
+
+        & .skills-conteiner {
+
+          &:hover {
+            transform: scale(1.1);
+            border: 2px solid $color-font-secundaria;
+            box-shadow: 0px 0px 7px #ff4f8a6e;
+          }
+
+          & img {
+            width: 50px;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+
 }
 
 @media (max-width: 800px) {
@@ -49,94 +117,95 @@
     gap: 2px !important;
   }
 
-  // config 1 sessão da main
-  #section-apresentation {
+  // // config 1 sessão da main
+  // #section-apresentation {
 
-    & .conteiner-content {
-      gap: 26px !important;
+  //   & .conteiner-content {
+  //     gap: 26px !important;
 
-      & .ft-perf {
-        &::before {
-          height: 358px !important;
-          width: 245px !important;
-        }
+  //     & .ft-perf {
+  //       &::before {
+  //         height: 358px !important;
+  //         width: 245px !important;
+  //       }
 
-        & img {
-          width: 250px !important;
-        }
-      }
+  //       & img {
+  //         width: 250px !important;
+  //       }
+  //     }
 
-      & .apresentation-my {
-        @include flexBoxAlinhamento(left, space-between, 8px);
+  //     & .apresentation-my {
+  //       @include flexBoxAlinhamento(left, space-between, 8px);
 
-        & p:first-child {
-          font-size: 23px !important;
-        }
+  //       & p:first-child {
+  //         font-size: 23px !important;
+  //       }
 
-        & h1 {
-          height: 100px !important;
-          width: 300px !important;
-          font-size: 37px !important;
-        }
+  //       & h1 {
+  //         height: 100px !important;
+  //         width: 300px !important;
+  //         font-size: 37px !important;
+  //       }
 
-        & p:nth-child(3) {
-          height: 60px !important;
-          width: 235px !important;
-          font-size: 18px !important;
-        }
+  //       & p:nth-child(3) {
+  //         height: 60px !important;
+  //         width: 235px !important;
+  //         font-size: 18px !important;
+  //       }
 
-        & a img {
-          margin-top: 50px !important;
-          width: 95px !important;
-        }
-      }
-    }
-  }
+  //       & a img {
+  //         margin-top: 50px !important;
+  //         width: 95px !important;
+  //       }
+  //     }
+  //   }
+  // }
 
-  // config 2 sessão da main
-  #section-about {
+  // // config 2 sessão da main
+  // #section-about {
 
-    .about-content {
-      flex-direction: column;
+  //   .about-content {
+  //     flex-direction: column;
 
-      & .about-title {
-        font-size: 25px !important;
-      }
+  //     & .about-title {
+  //       font-size: 25px !important;
+  //     }
 
-      & .about-me {
-        width: 85% !important;
-      }
-    }
-  }
+  //     & .about-me {
+  //       width: 85% !important;
+  //     }
+  //   }
+  // }
 }
 
 @media (max-width: 610px) {
 
   // config menu
-  #section-menu{
+  #section-menu {
     padding: 0px 25px !important;
+
     .menu {
       flex-direction: row;
       justify-content: space-between !important;
-  
+
       & .logo a {
         font-size: 23px !important;
-  
+
         & span {
           font-size: 30px !important;
         }
       }
-  
+
       & .btnHamburg {
         display: flex !important;
       }
-  
+
       & .menu-list {
         width: 100%;
         display: none !important;
-        position: absolute;        
+        position: absolute;
       }
-  
+
       & .menu-list.active {
         height: 55px;
         width: 100%;
@@ -147,11 +216,11 @@
         gap: 15px !important;
         background-color: $color-background;
         border-bottom: 2px solid $color-background-secundaria;
-  
+
         & li {
           text-align: center;
           background-color: transparent;
-  
+
           & a {
             color: $color-font-primaria;
             font-size: 13px !important;
@@ -161,11 +230,11 @@
           }
         }
       }
-  
+
     }
   }
 
-  
+
 
   // config 1 sessão da main
   #section-apresentation {
