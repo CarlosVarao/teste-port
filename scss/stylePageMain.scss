@@ -1,0 +1,323 @@
+/*========== CONFIG GERAL ==========*/
+
+html {
+  scroll-behavior: smooth;
+
+  & body {
+    background-color: $color-background;
+
+    &::-webkit-scrollbar {
+      width: 12px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-image: linear-gradient(rgba(255, 255, 255, 0), #d71f5b, #ff0077, #d71f5b, rgba(0, 0, 0, 0));
+    }
+  }
+}
+
+main {
+  overflow: hidden;
+  @include estruturaMain;
+
+  // ========== CONFIG DO LAYOUT ==========
+  & .estruturaDaMain {
+    width: 1200px;
+
+    // CONFIG SECTION 1- PROPRIEDADES DA APRESENTAÇÃO 
+    #section-apresentation {
+      @include estruturaLargurasSections;
+      @include flexBox(flex, center, center, wrap, 0px);
+
+      & .conteiner-content {
+        @include estruturaHeightWidthSections;
+        @include flexBox(flex, center, center, wrap, 35px);
+
+        & .ft-perf {
+          width: 325px;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: -12px;
+            left: -24px;
+            height: 455px;
+            width: 310px;
+            border: 5px solid $color-background-secundaria;
+          }
+
+          & img {
+            width: 320px;
+            margin-top: 5px;
+            filter: grayscale(1);
+          }
+        }
+
+        & .apresentation-my {
+          width: 800px;
+
+          & p:first-child {
+            color: $color-font-secundaria;
+            font-family: $font-secundaria;
+            font-size: 29px;
+            position: relative;
+
+            & span {
+              position: absolute;
+              margin-left: 4px;
+              animation: rotateEmoji 2s 3s infinite ease-in-out;
+              @include rotateEmoji;
+              background-color: transparent;
+            }
+          }
+
+          & h1 {
+            font-size: 70px;
+          }
+
+          & p:nth-child(3) {
+            height: 86px;
+            width: 617px;
+            font-size: 28px;
+          }
+
+          & a img {
+            margin: 0px 0px 0px 35%;
+            width: 110px;
+          }
+        }
+      }
+    }
+
+    // CONFIG SECTION 2- PROPRIEDADES DO SOBRE MIM
+    #section-about {
+      @include estruturaLargurasSections;
+      @include flexBox(flex, center, center, wrap, 0px);
+
+      & .about-content {
+        @include estruturaHeightWidthSections;
+        @include flexBox(flex, center, center, wrap, 35px);
+
+        & .about-title {
+          width: 325px;
+          font-size: 30px;
+          text-align: center;
+
+          & h2 {
+            color: $color-font-secundaria;
+            text-shadow: 0px 0px 2px #ff4f8a5d;
+
+            & i {
+              color: inherit;
+              margin-right: 20px;
+              text-shadow: 0px 0px 2px #ff4f8a5d;
+            }
+          }
+        }
+
+        & .about-me {
+          width: 800px;
+          position: relative;
+
+          & h2,
+          i {
+            font-size: 30px;
+          }
+
+          & p {
+            font-size: 23px;
+            text-align: justify;
+            line-height: 30px;
+
+            &:first-child {
+              margin-bottom: 20px;
+            }
+          }
+
+          & a img {
+            position: absolute;
+            bottom: -115px;
+            left: 45%;
+            width: 110px;
+          }
+        }
+      }
+    }
+
+    // CONFIG SECTION - PROPRIEDADES DAS TECNOLOGIAS
+    #section-skills {
+      @include estruturaLargurasSections;
+      @include flexBox(flex, center, center, wrap, 0px);
+
+      & .skills-box {
+        @include estruturaHeightWidthSections;
+        @include flexBox(flex, center, center, wrap, 35px);
+
+        & .skills-title {
+          position: relative;
+          height: 424px;
+          width: 370px;
+          text-align: center;
+          align-content: flex-start;
+          @include flexBox(flex, center, center, wrap, 20px);
+
+          & h2 {
+            font-size: 45px;
+            color: $color-font-secundaria;
+            text-shadow: 0px 0px 2px #ff4f8a5d;
+
+            & i {
+              color: inherit;
+              margin-right: 5px;
+              text-shadow: 0px 0px 2px #ff4f8a5d;
+            }
+          }
+
+          & p {
+            padding: 18px;
+            font-size: 15px;
+            text-align: justify;
+            border-radius: 8px;
+            border: 2px solid $color-background-border;
+            background-color: $color-background-secundaria;
+            transition: 200ms ease;
+          }
+
+          & .active {
+            transform: scale(1.06);
+            box-shadow: 0px 0px 7px #ff4f8a6e;
+            border-color: $color-font-secundaria;
+          }
+
+          & a img {
+            position: absolute;
+            bottom: 62px;
+            left: 34%;
+            width: 110px;
+            background-color: transparent;
+          }
+        }
+
+        & .skills-me-slider {
+          width: 700px;
+          @include gridTecno;
+
+          & .skills-conteiner {
+            border: 2px solid $color-background-border;
+            border-radius: 8px;
+            background-color: $color-background-secundaria;
+            @include flexBox(flex, center, center, nowrap, 10px);
+            transition: 200ms ease;
+
+            &:hover {
+              transform: scale(1.1);
+              border: 2px solid $color-font-secundaria;
+              box-shadow: 0px 0px 7px #ff4f8a6e;
+            }
+
+            & img {
+              width: 50px;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    // CONFIG SECTION - PROPRIEDADES DOS PROJETOS
+
+    #section-projects {
+      @include estruturaLargurasSections;
+      @include flexBox(flex, center, center, wrap, 0px);
+
+      & .projects-box {
+        @include estruturaHeightWidthSections;
+        @include flexBox(flex, normal, center, wrap, 50px);
+        // flex-direction: column;
+
+        & .projects-title {
+          width: 100%;
+          @include flexBox(flex, center, center, wrap, 18px);
+
+          & h2 {
+            font-size: 45px;
+            color: $color-font-secundaria;
+            text-shadow: 0px 0px 2px #ff4f8a5d;
+
+            & i {
+              color: inherit;
+              margin-right: 5px;
+              text-shadow: 0px 0px 2px #ff4f8a5d;
+            }
+          }
+
+          & span {
+            width: 50%;
+            border-bottom: 2px solid $color-background-secundaria;
+          }
+
+          & a {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: $color-font-secundaria;
+
+            & i {
+              color: $color-font-secundaria;
+              font-size: 45px;
+              text-shadow: 0px 0px 2px #ff4f8a5d;
+            }
+          }
+        }
+
+
+        & .projects-me-slider {
+          width: 100%;
+          position: relative;
+          @include gridProjt;
+
+          & .projects-conteiner {
+            border: 2px solid $color-background-border;
+            border-radius: 8px;
+            background-color: $color-background-secundaria;
+            transition: 200ms ease;
+            overflow: hidden;
+            cursor: pointer;
+
+            & img {
+              height: 100%;
+              width: 100%;
+              object-fit: fill;
+              filter: blur(4px);
+              transition: 200ms ease;
+
+              &:hover {
+                filter: blur(0px);
+                transform: scale(1.05);
+              }
+            }
+
+            &:hover {
+              transform: scale(1.02);
+            }
+          }
+
+          & a .arrowSeta {
+            position: absolute;
+            bottom: 27px;
+            left: 46%;
+            width: 110px;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+
+
+
+
+  }
+}
