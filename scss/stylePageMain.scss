@@ -102,10 +102,10 @@ main {
 
         & .about-title {
           width: 325px;
+          font-size: 30px;
           text-align: center;
 
           & h2 {
-            font-size: 45px;
             color: $color-font-secundaria;
             text-shadow: 0px 0px 2px #ff4f8a5d;
 
@@ -120,6 +120,11 @@ main {
         & .about-me {
           width: 800px;
           position: relative;
+
+          & h2,
+          i {
+            font-size: 30px;
+          }
 
           & p {
             font-size: 23px;
@@ -136,7 +141,6 @@ main {
             bottom: -115px;
             left: 45%;
             width: 110px;
-            background-color: transparent;
           }
         }
       }
