@@ -1,0 +1,37 @@
+/*========== CONFIG GERAL ==========*/
+
+footer {
+  
+  & .footerNav {
+    height: 90px;
+    padding: 0px 50px;
+    background-color: $color-background-secundaria;
+    @include flexBox(flex, center, space-between, wrap, 0px);
+  }
+
+  & .copyright p {
+    color: $color-font-secundaria;
+    font-size: 16px;
+    font-family: $font-secundaria;
+  }
+
+  & .redesSociais {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    
+    & a {
+      transition: 410ms ease;
+      
+      &:hover {
+        transform: translateY(-10px);
+      }
+
+      & i {
+        color: $color-font-secundaria;
+        font-size: 30px;
+      }
+    }
+  }
+}

@@ -12,7 +12,6 @@
   list-style: none;
   color: #c4c4cc;
   font-family: "Titillium Web", sans-serif;
-  background-color: #121214;
 }
 
 @media (max-width: 1200px) {
@@ -361,6 +360,7 @@
   width: 100%;
   padding: 0px 50px;
   border-bottom: 2px solid #202024;
+  background-color: #121214;
 }
 #section-menu .menu {
   height: 100%;
@@ -797,6 +797,39 @@ main .estruturaDaMain #section-projects .projects-box .projects-me-slider a .arr
   left: 46%;
   width: 110px;
   background-color: transparent;
+}
+
+/*========== CONFIG GERAL ==========*/
+footer .footerNav {
+  height: 90px;
+  padding: 0px 50px;
+  background-color: #202024;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0px;
+}
+footer .copyright p {
+  color: #d71f5b;
+  font-size: 16px;
+  font-family: "Roboto Mono", monospace;
+}
+footer .redesSociais {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+footer .redesSociais a {
+  transition: 410ms ease;
+}
+footer .redesSociais a:hover {
+  transform: translateY(-10px);
+}
+footer .redesSociais a i {
+  color: #d71f5b;
+  font-size: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
